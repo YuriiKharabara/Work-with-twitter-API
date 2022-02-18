@@ -71,7 +71,7 @@ def main(username):
     map = folium.Map()
     markers_of_followers = folium.FeatureGroup(name=f"followers of {information['data']['name']}")
     for i in coords:
-        markers_of_followers.add_child(folium.Marker(location=[i[0], i[1]], popup=str(coords[i])[1:-1], icon=folium.Icon()))
+        markers_of_followers.add_child(folium.Marker(location=[i[0], i[1]], popup=',\n\n'.join(coords[i]), icon=folium.Icon()))
     map.add_child(markers_of_followers)
     map.add_child(folium.LayerControl())
     map.save('templates/Map.html')
