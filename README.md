@@ -14,3 +14,5 @@ now you're able to see the Map
 
 ## Additional modules
 you have to install Flask, folium, pprint, geopy
+# Don't forget to add hidden.py which have to look like this:
+![image](https://user-images.githubusercontent.com/91532556/154765487-bd827a72-87ad-4f19-b9e3-132e1851f030.png)
