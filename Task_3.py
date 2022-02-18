@@ -36,15 +36,16 @@ def get_coords(place):
     if location==None:
         return None
     return location.latitude, location.longitude
-
+# @app.route('/add')
 # def get_username():
 #     main(user_name)
-
+#     return render_template('Map.html')
 @app.route('/', methods=("GET", "POST"))
 def get_info():
     if request.method == 'POST':
         user_name=request.form["user"]
-        return redirect(url_for('main', user_name))
+        main(user_name)
+        return render_template("Map.html")
     return render_template("main_page.html")
 
 @app.route('/map', methods=("GET", "POST"))
